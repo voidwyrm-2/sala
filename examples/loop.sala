@@ -1,0 +1,16 @@
+; simple loop to test jumping that prints 0-9
+
+push 0 ; [] -> [i]
+
+:loop
+dup ; [i] -> [i, i]
+print ; [i, i] -> [i]
+push "\n"
+print
+
+push 1 ; [i] -> [i, 1]
+add ; [i, 1] -> [i + 1]
+
+dup ; [i] -> [i, i]
+push 10 ; [i, i] -> [i, i, 10]
+jlt loop ; [i, i, 10] -> [i]; i == 10 ? pc = label["loop"] : null

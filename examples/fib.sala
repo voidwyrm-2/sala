@@ -1,0 +1,35 @@
+; fibonacci
+.var 3
+
+alias AMOUNT 20
+
+alias N 0
+alias A 1
+alias B 2
+
+; loop index
+push 0
+sv $N
+
+push 0
+sv $A
+
+push 1
+sv $B
+
+:loop
+gv $A
+print
+
+gv $A
+gv $B
+dup
+sv $A
+add
+sv $B
+
+gv $N
+push 1
+add
+push $AMOUNT
+jlt loop

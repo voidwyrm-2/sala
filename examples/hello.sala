@@ -1,0 +1,4 @@
+; hello world
+
+push "Hello, world!\n"
+print
